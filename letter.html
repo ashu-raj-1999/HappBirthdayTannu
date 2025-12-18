@@ -47,6 +47,7 @@ h1 {
     box-shadow:0 0 20px rgba(106,76,147,0.3);
     position:relative;
     overflow:hidden;
+    white-space: pre-line;
 }
 .letter-container::before {
     content:'';
@@ -243,12 +244,31 @@ h1 {
     }
 }
 
+.download-button {
+    display: inline-block;
+    padding: 12px 25px;
+    background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+    color: white;
+    font-weight: bold;
+    border-radius: 30px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(255, 105, 135, 0.4);
+}
+
+.download-button:hover {
+    transform: translateY(-2px) scale(1.05);
+    box-shadow: 0 8px 20px rgba(255, 105, 135, 0.6);
+    background: linear-gradient(135deg, #fad0c4, #ff9a9e);
+}
+
+
 </style>
 </head>
 <body>
 
 <div class="container">
-    <h1>For My Dearest Friend ❤️</h1>
+    <h1>For My Forever❤️</h1>
 
     <div class="letter-container">
         <div class="letter" id="typed-text"></div>
@@ -310,7 +330,14 @@ h1 {
                 <button class="playlist-item-play"><i class="fas fa-play"></i></button>
             </div>
         </div>
+            <div class="modal-footer" style="margin-top: 20px; text-align: center;">
+                <a href="My_Letter_For_You.pdf" download class="download-button">
+                    <i class="fas fa-download"></i> Download Your Letter 💌
+                </a>
+            </div>
+
     </div>
+    
 </div>
 
 <!-- Audio Player -->
@@ -323,7 +350,7 @@ h1 {
 <script src="https://cdnjs.cloudflare.com/ajax/libs/canvas-confetti/1.5.1/confetti.browser.min.js"></script>
 <script>
 document.addEventListener('DOMContentLoaded',function(){
-    const typedContent = "My dearest friend,\n\nAs I sit here thinking about all our memories together, I can't help but smile. From our late-night talks to our spontaneous adventures, you've filled my life with so much joy and laughter.\n\nHappy Birthday to my favorite person in the world! Here's to many more years of friendship, laughter, and creating memories together.\n\nWith all my love,\n[Your Name]";
+    const typedContent = "My Love,\n\nHappy Birthday ❤️\n\n Everyday with you is a beautiful gift. Your love fills my heart with joy, and your smile makes even the simplest moment feel magical. Life by your side is my greatest adventure.\n\n No matter what what comes our way, I promise to love endlessly, you are my happiness, home and my forever.\n\nWe’ve had our ups and downs, moments of misunderstanding and silence, but even then my feelings for you never changed. Every phase taught me how deeply I care and how much you truly matter to me.\n\nOn your birthday, I wish you all the happiness you bring into my world and more. I hope your dreams find their way to you, and I hope I get to stand beside you through every chapter, cheering you on, holding your hand, and loving you a little more each day.\n\n  I am so happy I met a such a wonderful person like you, you are the best girlfriend anyone could ever ask for.\n\nThank you for being you. Thank you for choosing me.\nHappy Birthday, my favorite person. 💖 \nAshu";
     new Typed('#typed-text',{strings:[typedContent], typeSpeed:30, showCursor:true, cursorChar:'|', onComplete:()=>{
         document.getElementById('surprise-button').classList.add('animate__animated','animate__pulse','animate__infinite');
     }});
